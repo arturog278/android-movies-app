@@ -21,6 +21,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "TMDB_API_KEY", "\"${getApiKey("TMDB_API_KEY")}\"")
+        buildConfigField("String", "MAPS_API_KEY", "\"${getApiKey("MAPS_API_KEY")}\"")
     }
 
     buildTypes {

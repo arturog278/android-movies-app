@@ -1,5 +1,3 @@
-
-
  # 🎬 Movies - Aplicación Android
  
  Movies es una aplicación de Android que permite a los usuarios explorar películas populares, rastrear ubicaciones y subir imágenes.  
@@ -28,10 +26,22 @@
  📌 **Edita `local.properties` y añade las claves necesarias:**
  ```
  TMDB_API_KEY=tu_tmdb_api_key
+ MAPS_API_KEY=tu_maps_api_key
  ```
  📌 **Estas claves se inyectan automáticamente en `BuildConfig`.**
- 
- ### 🔹 **3. Sincronizar Gradle y Ejecutar la App**
+
+ ### 🔹 **3. Configurar Firebase (`google-services.json`)**
+ Para utilizar Firebase Firestore y Firebase Storage, es necesario configurar `google-services.json`:
+
+ 1. **Ir a la [Consola de Firebase](https://console.firebase.google.com/).**
+ 2. **Seleccionar tu proyecto y agregar una nueva aplicación Android.**
+ 3. **Descargar el archivo `google-services.json`.**
+ 4. **Colocar el archivo dentro de la carpeta `app/` del proyecto.**
+
+ 📌 **`google-services.json` contiene información sensible y NO debe subirse a GitHub.**  
+ Para evitar que se suba, asegúrate de que el archivo `app/google-services.json` está en **`.gitignore`**.
+
+ ### 🔹 **4. Sincronizar Gradle y Ejecutar la App**
  - Abre el proyecto en **Android Studio**
  - **Sincroniza Gradle** (`Sync Now`)
  - Ejecuta la aplicación en un dispositivo/emulador
